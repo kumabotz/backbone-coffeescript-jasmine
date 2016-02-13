@@ -1,0 +1,3 @@
+javascript/models/*.js
+javascript/spec/**/*.js
+javascript/*.js
