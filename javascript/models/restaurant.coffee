@@ -14,3 +14,6 @@ class Gourmet.Models.Restaurant extends Backbone.Model
       type: 'number'
       min: 1
       max: 5
+
+class Gourmet.Collections.RestaurantsCollection extends Backbone.Collection
+  model: Gourmet.Models.Restaurant
