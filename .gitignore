@@ -1,3 +1,4 @@
 javascript/models/*.js
+javascript/views/*.js
 javascript/spec/**/*.js
 javascript/*.js
