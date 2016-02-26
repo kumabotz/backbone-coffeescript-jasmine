@@ -6,7 +6,7 @@ class Gourmet.Views.RestaurantForm extends Backbone.View
     data = @parseFormData(@$el.serializeArray())
     newRestaurant = new Gourmet.Models.Restaurant(data)
     errors = newRestaurant.validate(newRestaurant.attributes)
-    if errors then @handleErrors(errors) else @collection.add(newRestaurant)
+    if errors then @handleErrors(errors) else @collection.create(newRestaurant)
 
   parseFormData: (serializeArray) ->
     _.reduce(serializeArray, @parseFormField, {})
