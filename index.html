@@ -24,10 +24,11 @@
     <script type="text/javascript "src="/javascript/app.js"></script>
     <script type="text/javascript "src="/javascript/models/restaurant.js"></script>
     <script type="text/javascript "src="/javascript/views/restaurants.js"></script>
+    <script type="text/javascript "src="/javascript/views/restaurant_form.js"></script>
   </head>
   <body>
     <script type="text/javascript">
-      restaurants_data = [
+      restaurantsData = [
         {
           id: 0,
           name: 'Ritz',
@@ -48,10 +49,14 @@
         }
       ];
       $(document).ready(function() {
-        restaurants = new Gourmet.Collections.RestaurantsCollection(restaurants_data);
-        restaurants_view = new Gourmet.Views.RestaurantsView({
-          collection: restaurants,
-          el: '#restaurants tbody'
+        restaurants = new Gourmet.Collections.RestaurantsCollection(restaurantsData);
+        restaurantsView = new Gourmet.Views.RestaurantsView({
+          el: '#restaurants tbody',
+          collection: restaurants
+        });
+        restaurantsFormView = new Gourmet.Views.RestaurantForm({
+          el: '#restaurant-form',
+          collection: restaurants
         });
       });
     </script>
